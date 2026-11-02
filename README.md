@@ -17,10 +17,15 @@ Footalytics runs a Dixon-Coles adjusted Poisson model over real fixtures and gra
 **Claude Code** — copy the folder into your skills directory:
 
 ```bash
-git clone https://github.com/footalytics/footalytics-skill ~/.claude/skills/footalytics
+git clone https://gitlab.com/footalytics/footalytics-skill ~/.claude/skills/footalytics
 ```
 
-**Any Agent-Skills-compatible assistant** (Codex, Cursor, …): point it at the `footalytics/SKILL.md` file, or paste the SKILL.md content into your agent's instructions.
+**As a plugin (Claude Code or Cursor)** — the repo ships plugin manifests (`.claude-plugin/`, `.cursor-plugin/`):
+
+- Claude Code: `/plugin marketplace add https://gitlab.com/footalytics/footalytics-skill`, then `/plugin install footalytics@footalytics`.
+- Cursor: in **Customize → Skills**, import this repository (it includes `.cursor-plugin/marketplace.json`), or add it as a team marketplace (Dashboard → Plugins & MCPs → Add Marketplace).
+
+**Any Agent-Skills-compatible assistant** (Codex, …): point it at the `SKILL.md` file, or paste the SKILL.md content into your agent's instructions.
 
 **Claude / ChatGPT (connectors)** — no file needed: add the MCP server `https://footalytics.farvor.com/mcp` as a custom connector and sign in with OAuth. Same tools, same allowance.
 
@@ -52,11 +57,14 @@ When results are displayed or shared, keep **"Predictions by Footalytics"** with
 ## Files
 
 - `SKILL.md` — the skill: trigger description, setup, endpoints, error handling.
+- `skills/footalytics/SKILL.md` — plugin-packaged copy of the skill (kept identical; used by Claude Code / Cursor plugin discovery).
+- `.claude-plugin/` · `.cursor-plugin/` — plugin manifests for the Claude Code and Cursor marketplaces.
 - `README.md` — this file.
 
 ## Links
 
 - [API documentation](https://footalytics.farvor.com/api-docs) · [API keys](https://footalytics.farvor.com/api-keys) · [Public accuracy ledger](https://footalytics.farvor.com/accuracy) · [Pricing](https://footalytics.farvor.com/pricing)
+- Source: this GitLab repository (canonical) · [GitHub mirror](https://github.com/lewis-v/footalytics-skill)
 
 ## License
 

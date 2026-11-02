@@ -1,0 +1,11 @@
+{
+  "name": "footalytics",
+  "displayName": "Footalytics",
+  "description": "Football match predictions and data from Footalytics — win/draw/loss probabilities, over/under 2.5 and BTTS, fixtures, team ratings and graded results, served by the Footalytics API.",
+  "version": "1.0.0",
+  "author": { "name": "Farvor", "url": "https://footalytics.farvor.com" },
+  "homepage": "https://footalytics.farvor.com",
+  "repository": "https://gitlab.com/footalytics/footalytics-skill",
+  "license": "MIT",
+  "keywords": ["football", "soccer", "predictions", "sports-analytics", "agent-skills"]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "footalytics",
+  "owner": { "name": "Farvor", "url": "https://footalytics.farvor.com" },
+  "metadata": {
+    "description": "Footalytics football predictions skill",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "footalytics",
+      "source": "./",
+      "description": "Football match predictions and data — win/draw/loss probabilities, over/under 2.5, BTTS, fixtures, team ratings, graded results.",
+      "version": "1.0.0"
+    }
+  ]
+}

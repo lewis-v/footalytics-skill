@@ -17,10 +17,15 @@ Footalytics 用 Dixon-Coles 修正的泊松模型对真实赛程计算概率，�
 **Claude Code** —— 将仓库克隆到技能目录：
 
 ```bash
-git clone https://github.com/footalytics/footalytics-skill ~/.claude/skills/footalytics
+git clone https://gitlab.com/footalytics/footalytics-skill ~/.claude/skills/footalytics
 ```
 
-**其他兼容 Agent Skills 的助手**（Codex、Cursor 等）：将 `SKILL.md` 文件指向你的 agent，或把 SKILL.md 内容粘贴进指令。
+**作为插件安装（Claude Code / Cursor）** —— 仓库自带插件清单（`.claude-plugin/`、`.cursor-plugin/`）：
+
+- Claude Code：`/plugin marketplace add https://gitlab.com/footalytics/footalytics-skill`，然后 `/plugin install footalytics@footalytics`。
+- Cursor：在 **Customize → Skills** 导入本仓库（已含 `.cursor-plugin/marketplace.json`），或添加为团队市场（Dashboard → Plugins & MCPs → Add Marketplace）。
+
+**其他兼容 Agent Skills 的助手**（Codex 等）：将 `SKILL.md` 文件指向你的 agent，或把 SKILL.md 内容粘贴进指令。
 
 **Claude / ChatGPT（连接器）** —— 无需文件：把 MCP 服务器 `https://footalytics.farvor.com/mcp` 添加为自定义连接器并用 OAuth 登录。同样的工具、同样的额度。
 
@@ -52,12 +57,15 @@ export FOOTALYTICS_API_KEY="fxk_..."   # 免费创建密钥：https://footalytic
 ## 文件
 
 - `SKILL.md` — 技能本体：触发描述、配置、端点、错误处理。
+- `skills/footalytics/SKILL.md` — 插件打包用的同内容副本（保持一致，供 Claude Code / Cursor 插件发现）。
+- `.claude-plugin/` · `.cursor-plugin/` — Claude Code 与 Cursor 市场的插件清单。
 - `README.md` / `README.zh-CN.md` — 本文件（英文/中文）。
 
 ## 链接
 
 - [API 文档](https://footalytics.farvor.com/api-docs) · [API 密钥](https://footalytics.farvor.com/api-keys) · [公开准确率账本](https://footalytics.farvor.com/accuracy) · [定价](https://footalytics.farvor.com/pricing)
+- 源码：本 GitLab 仓库（主仓） · [GitHub 镜像](https://github.com/lewis-v/footalytics-skill)
 
 ## 许可证
 
-发布前最终确定（计划 MIT）。
+MIT —— 见 [LICENSE](LICENSE)。
