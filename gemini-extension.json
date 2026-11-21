@@ -1,0 +1,10 @@
+{
+  "name": "footalytics",
+  "version": "1.0.0",
+  "description": "Football match predictions via MCP: win/draw/loss probabilities, over/under 2.5 goals, BTTS, team ratings and a publicly graded accuracy ledger.",
+  "mcpServers": {
+    "footalytics": {
+      "httpUrl": "https://footalytics.farvor.com/mcp"
+    }
+  }
+}
